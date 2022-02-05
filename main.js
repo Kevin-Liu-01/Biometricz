@@ -3,8 +3,15 @@ import './style.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
+
 const firebaseConfig = {
-  // your config
+  apiKey: "AIzaSyBS8hUb2v_ZmJK8GHw3pzYwb0-433kU1i4",
+  authDomain: "virtualhealth-webcam.firebaseapp.com",
+  projectId: "virtualhealth-webcam",
+  storageBucket: "virtualhealth-webcam.appspot.com",
+  messagingSenderId: "849749506126",
+  appId: "1:849749506126:web:ed7b1d384b973d499eeb1f",
+  measurementId: "G-K9VFV2M1E0"
 };
 
 if (!firebase.apps.length) {
@@ -26,7 +33,7 @@ const pc = new RTCPeerConnection(servers);
 let localStream = null;
 let remoteStream = null;
 
-// HTML elements
+// Elements
 const webcamButton = document.getElementById('webcamButton');
 const webcamVideo = document.getElementById('webcamVideo');
 const callButton = document.getElementById('callButton');
@@ -35,7 +42,7 @@ const answerButton = document.getElementById('answerButton');
 const remoteVideo = document.getElementById('remoteVideo');
 const hangupButton = document.getElementById('hangupButton');
 
-// 1. Setup media sources
+// Media sources
 
 webcamButton.onclick = async () => {
   localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
