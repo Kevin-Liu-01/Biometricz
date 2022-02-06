@@ -1,4 +1,4 @@
-Biometricz Code
+Biometricz Code Repository
 
 By: Arjun Tschand, Anish Pallati, Kevin Liu
 
